@@ -5,7 +5,7 @@ body {
   margin: 0;
 }
 
-body p, .font-running, .feature {
+.font-running, .feature {
   font-family: 'Crimson Text', serif;
 }
 
