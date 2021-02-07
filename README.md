@@ -35,3 +35,14 @@ Made by [Glitch](https://glitch.com/)
 -------------------
 
 \ ゜o゜)ノ
+
+
+### Chrome Readme
+Some important information for you:
+
+-	By clicking on the 'Add to Chrome' button and installing NewTaber extension, you are agreeing to install this extension, with our Privacy Policy and our Terms of Service. 
+-	By installing, NewTaber will change your Chrome's default search.
+-	You may remove or disable this extension anytime.
+-	Review our Terms of Service: https://newtaber.com/tos.html
+
+Contact us! We'd love to hear from you: support@newtaber.com
