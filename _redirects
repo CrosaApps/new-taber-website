@@ -1,3 +1,2 @@
-# Redirect with a 301
-/about         /tos                                                     301
-/privacy    https://ko-fi.com/dtinth                                     302
+/* https://arewegameyet.rs/:splat 301!
+/  https://arewegameyet.rs        301!
