@@ -9,6 +9,11 @@ body {
   font-family: 'Crimson Text', serif;
 }
 
+.font-running-bold {
+  font-family: 'Crimson Text';
+  font-weight: 600;
+}
+
 .container {
   max-width: 1100px;
 }
@@ -34,4 +39,12 @@ body {
 .footer-item a {
     margin-right: 18px;
     margin-bottom: 10px;
+}
+
+.browser-container {
+  bottom: -50px;
+}
+
+.specialty li {
+  margin: 20px 0;
 }
