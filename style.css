@@ -44,3 +44,7 @@ body {
 .browser-container {
   bottom: -50px;
 }
+
+.specialty li {
+  margin: 20px 0;
+}

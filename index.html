@@ -25,19 +25,32 @@
 </head>
 
 <body>
-  <div class="bg-black text-white p-8 pb-24 hero-section relative">
+  <div class="bg-black text-white p-8 pb-20 hero-section relative">
     <section class="container mx-auto">
       <header>
         <div class="flex flex-col justify-center items-center mt-14">
           <img src="https://cdn.glitch.com/dceeace9-496f-4590-920c-4ca239e220fe%2Flogo.png?v=1612692524432"
             class="w-20 h-20" />
           <span class="text-3xl mt-5">New Taber</span>
+          <div class="text-2xl mt-1 text-green-500">For all your Browser Extension needs</div>
         </div>
       </header>
 
       <div class="text-center mt-20">
         <div class="text-4xl" style="line-height: 3rem">
-          We are a <span class="text-green-500">team</span> of enthusiastic <span class="text-green-500">Extension developer</span> who loves to solve the day-to-day issues using a wide variety of browser extension!
+          We are a <span class="text-green-500x">team</span> of <span class="text-green-500x">enthusiastic Extension developer</span> who loves to solve the day-to-day issues using a wide variety of browser extension!
+        </div>
+
+        <div class="container mx-auto text-center mt-16">
+          <div class="bg-green-200 rounded-lg p-4 w-1/12 inline-block mx-5">
+            <img src="./assets/chrome.png" alt="" class="inline">
+          </div>
+          <div class="bg-green-200 rounded-lg p-4 w-1/12 inline-block mx-5">
+            <img src="./assets/ff.png" alt="" class="inline">
+          </div>
+          <div class="bg-green-200 rounded-lg p-4 w-1/12 inline-block mx-5">
+            <img src="./assets/safari.png" alt="" class="inline">
+          </div>
         </div>
 
         <div class="mt-20">
@@ -80,8 +93,34 @@
   <!--  Features Section   -->
   <div class="container mx-auto m-20" id="highlights"></div>
 
+  <!--   Benefits    -->
+  <section class="bg-black text-white p-10" id="contactus">
+    <div class="container mx-auto">
+      <h3 class="text-center text-4xl text-center">
+        What's our specialty
+      </h3>
+
+      <div class="specialty flex justify-around mt-16 text-2xl">
+        <div>
+          <ul class="list-disc">
+            <li> Staying on top of technological innovation  </li>
+            <li> Improved browsing experience  </li>
+            <li> Focusing on Productivity   </li>
+          </ul>
+        </div>
+        <div>
+          <ul class="list-disc">
+            <li> Wide range of integrations  </li>
+            <li> Added browser functionality </li>
+            <li> Accessibility at it's core   </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!--   Contact Us   -->
-  <section class="bg-black text-white p-10 text-center" id="contactus">
+  <section class="p-10 text-center" id="contactus">
     <div class="container mx-auto">
       <h3 class="text-center text-4xl">
         Contact Us
@@ -89,10 +128,8 @@
 
       <div class="flex justify-around mt-16 text-2xl">
         <div class="font-running">
-          Contact us for any queries related to the New-Taber extension. We'll thrive to get back to any queries as fast as
-          we can.
-          Just send us an Email for any queries
-
+          Contact us for any queries related to the New-Taber. We'll thrive to get back to any queries as fast as
+          we can. Just send us an Email for any queries
           <div class="text-3xl mt-10">
             <a class="underline" href="mailto:support@newtaber.com">support@newtaber.com</a>
           </div>
@@ -102,7 +139,7 @@
   </section>
 
   <!--   CTA   -->
-  <section class="p-10 text-center mt-10 mb-10 hidden" id="cta">
+  <!-- <section class="p-10 text-center mt-10 mb-10" id="cta">
     <div class="container mx-auto">
       <div class="flex justify-around text-2xl">
         <div class="font-running">
@@ -120,7 +157,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!--   Footer   -->
   <footer></footer>
@@ -133,27 +170,24 @@
   <script>
     let highlights = [{
       title: 'Security is our foremost concern',
-      description: `Make you browsing and search experience a delight one by installing NewTaber extension.
-        This extension will change the default search engine in your browser to <i><b>Yahoo!</b></i> to make it more easier to find
-        things you are searching for`,
+      description: `Web security has been a challenging bubble since the initial evolution of web. We at NewTaber, strive to make t
+      our extension secure by default. we didn't take security as a feature but as a core value for all of our extensions.`,
       illustration: './assets/i4.png'
     }, {
       title: 'Quality is in our roots',
-      description: `Make you browsing and search experience a delight one by installing NewTaber extension.
-        This extension will change the default search engine in your browser to <i><b>Yahoo!</b></i> to make it more easier to find
-        things you are searching for`,
+      description: `Quality is built into our roots. we always place customers over the profit. Making customers happy is our ultimate
+      goal. We firmly believe that Quality product will make our customer happy.`,
       illustration: './assets/i1.png'
     }, {
       title: 'Your extension will work everywhere',
-      description: `Make you browsing and search experience a delight one by installing NewTaber extension.
-        This extension will change the default search engine in your browser to <i><b>Yahoo!</b></i> to make it more easier to find
-        things you are searching for`,
+      description: `With increasing number of browser vendors, it is essential to make sure our chrome extension will work in all 
+      major browser vendors. We innovate at NewTaber to make sure the extension will work in all major browser without any major
+      revamps`,
       illustration: './assets/i2.png'
     }, {
       title: 'We are at your service, Always',
-      description: `Make you browsing and search experience a delight one by installing NewTaber extension.
-        This extension will change the default search engine in your browser to <i><b>Yahoo!</b></i> to make it more easier to find
-        things you are searching for`,
+      description: `We always listens to our customers. Be it a feedback, suggestion, complaints, just send us a quick mail, we'll 
+      respond with necessary details in a timely manner. We are always glad to assist you`,
       illustration: './assets/i3.png'
     }];
 
@@ -162,29 +196,24 @@
 
     for (let index = 0; index < highlights.length; index++) {
       const highlight = highlights[index];
+      let liftSideImage = index %2 != 0;
 
       let _markup = '';
       let imgMarkup = `<img
             src=${highlight.illustration}
             class="w-2/4 md:w-2/5 rounded m-4 mb-8 md:m-0" />`;
 
-      let contentMarkup = `<div class="w-3/4 md:w-3/5 text-2xl mx-8 font-running">
+      let contentMarkup = `<div class="w-3/4 md:w-3/5 text-2xl mx-8 font-running ${liftSideImage && 'text-right'}">
             <h3 class="mb-8 text-3xl font-running-bold">
               ${highlight.title}
             </h3>
             ${highlight.description}
           </div>`;
 
-      if (index % 2 === 0) {
-        _markup = `${imgMarkup}${contentMarkup}`;
-      } else {
-        _markup = `${contentMarkup}${imgMarkup}`;
-      }
-
       _markup = `${imgMarkup}${contentMarkup}`;
       
       markup += `
-        <div class="flex flex-col md:flex-row mb-14 items-center">
+        <div class="flex flex-col md:${liftSideImage ? 'flex-row-reverse' : 'flex-row'} mb-14 items-center">
           ${_markup}
         </div>
       `
