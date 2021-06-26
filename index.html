@@ -20,8 +20,6 @@
   <!-- import the webpage's stylesheet -->
   <link rel="stylesheet" href="/style.css" />
 
-  <!-- import the webpage's javascript file -->
-  <script src="/script.js" defer></script>
 </head>
 
 <body>
@@ -41,17 +39,7 @@
           We are a <span class="text-green-500x">team</span> of <span class="text-green-500x">enthusiastic Extension developer</span> who loves to solve the day-to-day issues using a wide variety of browser extension!
         </div>
 
-        <div class="container mx-auto text-center mt-16">
-          <div class="bg-green-200 rounded-lg p-4 w-1/12 inline-block mx-5">
-            <img src="./assets/chrome.png" alt="" class="inline">
-          </div>
-          <div class="bg-green-200 rounded-lg p-4 w-1/12 inline-block mx-5">
-            <img src="./assets/ff.png" alt="" class="inline">
-          </div>
-          <div class="bg-green-200 rounded-lg p-4 w-1/12 inline-block mx-5">
-            <img src="./assets/safari.png" alt="" class="inline">
-          </div>
-        </div>
+        <div class="container mx-auto text-center mt-16" id="browserlist"></div>
 
         <div class="mt-20">
           <a href="#contactus"
@@ -59,33 +47,7 @@
             Contact Us
           </a>
         </div>
-<!-- 
-        <div class="absolute w-screen flex justify-center items-center left-0 browser-container">
-          <img src="./assets/browsers.png" class="inline w-1/3" />
-        </div> -->
 
-        <!-- <div class="text-left flex flex-col md:flex-row mx-auto features justify-between mt-24 mb-10">
-          <div class="feature">
-            <img src="https://cdn.glitch.com/dceeace9-496f-4590-920c-4ca239e220fe%2Fbrowser.svg?v=1612694251127" />
-            Change themes of your new tab
-          </div>
-
-          <div class="feature">
-            <img src="https://cdn.glitch.com/dceeace9-496f-4590-920c-4ca239e220fe%2Fwww.svg?v=1612694473412" />
-
-            High Quality Extension
-          </div>
-          <div class="feature">
-            <img src="https://cdn.glitch.com/dceeace9-496f-4590-920c-4ca239e220fe%2Ffree.svg?v=1612694530914" />
-
-            Excellent Support
-          </div>
-          <div class="feature">
-            <img src="https://cdn.glitch.com/dceeace9-496f-4590-920c-4ca239e220fe%2Ffree.svg?v=1612694530914" />
-
-            Cross Browser Availability 
-          </div>
-        </div> -->
       </div>
     </section>
   </div>
@@ -138,88 +100,16 @@
     </div>
   </section>
 
-  <!--   CTA   -->
-  <!-- <section class="p-10 text-center mt-10 mb-10" id="cta">
-    <div class="container mx-auto">
-      <div class="flex justify-around text-2xl">
-        <div class="font-running">
-          Convinced? Go ahead and install the extension to ease the browsing experience.
-
-          <div class="text-3xl mt-10">
-            <a 
-              target="_blank" 
-              href="https://chrome.google.com/webstore/detail/ellmjompgdahckahbhdnbfdfggeapipp/"
-              class="border-4 p-3 px-6 text-xl border-black text-black hover:bg-black hover:text-white"
-            >
-              Add to Chrome
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
   <!--   Footer   -->
   <footer></footer>
 
   <script src="./common.js"></script>
+  <script src="/script.js"></script>
+
   <script>
     injectFooter();
-  </script>
-
-  <script>
-    let highlights = [{
-      title: 'Security is our foremost concern',
-      description: `Web security has been a challenging bubble since the initial evolution of web. We at NewTaber, strive to make t
-      our extension secure by default. we didn't take security as a feature but as a core value for all of our extensions.`,
-      illustration: './assets/i4.png'
-    }, {
-      title: 'Quality is in our roots',
-      description: `Quality is built into our roots. we always place customers over the profit. Making customers happy is our ultimate
-      goal. We firmly believe that Quality product will make our customer happy.`,
-      illustration: './assets/i1.png'
-    }, {
-      title: 'Your extension will work everywhere',
-      description: `With increasing number of browser vendors, it is essential to make sure our chrome extension will work in all 
-      major browser vendors. We innovate at NewTaber to make sure the extension will work in all major browser without any major
-      revamps`,
-      illustration: './assets/i2.png'
-    }, {
-      title: 'We are at your service, Always',
-      description: `We always listens to our customers. Be it a feedback, suggestion, complaints, just send us a quick mail, we'll 
-      respond with necessary details in a timely manner. We are always glad to assist you`,
-      illustration: './assets/i3.png'
-    }];
-
-    let highlightsContainer = document.getElementById('highlights');
-    let markup = '';
-
-    for (let index = 0; index < highlights.length; index++) {
-      const highlight = highlights[index];
-      let liftSideImage = index %2 != 0;
-
-      let _markup = '';
-      let imgMarkup = `<img
-            src=${highlight.illustration}
-            class="w-2/4 md:w-2/5 rounded m-4 mb-8 md:m-0" />`;
-
-      let contentMarkup = `<div class="w-3/4 md:w-3/5 text-2xl mx-8 font-running ${liftSideImage && 'text-right'}">
-            <h3 class="mb-8 text-3xl font-running-bold">
-              ${highlight.title}
-            </h3>
-            ${highlight.description}
-          </div>`;
-
-      _markup = `${imgMarkup}${contentMarkup}`;
-      
-      markup += `
-        <div class="flex flex-col md:${liftSideImage ? 'flex-row-reverse' : 'flex-row'} mb-14 items-center">
-          ${_markup}
-        </div>
-      `
-    }
-
-    highlightsContainer.innerHTML = markup;
+    injectFeatures();
+    injectBrowserList();
   </script>
 </body>
 
