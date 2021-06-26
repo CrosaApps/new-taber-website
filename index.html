@@ -8,8 +8,10 @@
 
   <link rel="shortcut icon"
     href="https://cdn.glitch.com/dceeace9-496f-4590-920c-4ca239e220fe%2Flogo.png?v=1612692524432" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Righteous&display=swap" rel="stylesheet" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Righteous&display=swap" rel="stylesheet"> 
 
   <title>New Taber!</title>
 
@@ -23,7 +25,7 @@
 </head>
 
 <body>
-  <div class="bg-black text-white p-8 hero-section">
+  <div class="bg-black text-white p-8 pb-24 hero-section">
     <section class="container mx-auto">
       <header>
         <div class="flex flex-col justify-center items-center mt-14">
@@ -34,62 +36,45 @@
       </header>
 
       <div class="text-center mt-20">
-        <div class="text-4xl">
-          An Extension that makes your browsing experience
-          <span class="text-green-500">Awe</span>!
+        <div class="text-4xl" style="line-height: 3rem">
+          We are a <span class="text-green-500">team</span> of enthusiastic <span class="text-green-500">Extension developer</span> who loves to solve the day-to-day issues using a wide variety of browser extension!
         </div>
 
         <div class="mt-20">
-          <a target="_blank" href="https://chrome.google.com/webstore/detail/ellmjompgdahckahbhdnbfdfggeapipp/"
+          <a href="#contactus"
             class="border-4 p-3 px-6 text-xl border-white bg-white text-black hover:bg-black hover:text-white">
-            Add to Chrome
+            Contact Us
           </a>
         </div>
 
-        <div class="text-left flex flex-col md:flex-row mx-auto features justify-between mt-24 mb-10">
-          <!-- <div class="feature">
+        <!-- <div class="text-left flex flex-col md:flex-row mx-auto features justify-between mt-24 mb-10">
+          <div class="feature">
             <img src="https://cdn.glitch.com/dceeace9-496f-4590-920c-4ca239e220fe%2Fbrowser.svg?v=1612694251127" />
             Change themes of your new tab
-          </div> -->
+          </div>
 
           <div class="feature">
             <img src="https://cdn.glitch.com/dceeace9-496f-4590-920c-4ca239e220fe%2Fwww.svg?v=1612694473412" />
 
-            Changes the default search engine to Yahoo!
+            High Quality Extension
           </div>
           <div class="feature">
             <img src="https://cdn.glitch.com/dceeace9-496f-4590-920c-4ca239e220fe%2Ffree.svg?v=1612694530914" />
 
-            Install this for free and enjoy
+            Excellent Support
           </div>
-        </div>
+          <div class="feature">
+            <img src="https://cdn.glitch.com/dceeace9-496f-4590-920c-4ca239e220fe%2Ffree.svg?v=1612694530914" />
+
+            Cross Browser Availability 
+          </div>
+        </div> -->
       </div>
     </section>
   </div>
 
   <!--  Features Section   -->
-  <div class="container mx-auto m-20">
-    <div class="flex flex-col md:flex-row mb-10 items-center">
-      <img
-        src="./assets/f3.png"
-        class="w-3/4 md:w-1/2 shadow-lg rounded m-4 md:m-0" />
-      <p class="w-3/4 md:w-1/2 text-2xl mx-8 font-running">
-        Make you browsing and search experience a delight one by installing NewTaber extension.
-        This extension will change the default search engine in your browser to <i><b>Yahoo!</b></i> to make it more easier to find
-        things you are searching for
-      </p>
-    </div>
-
-    <!-- <div class="flex flex-col-reverse md:flex-row mt-20 items-center">
-      <p class="w-3/4 md:w-1/2 text-2xl mx-8 font-running">
-        Get refreshed background images from a really cool collection of
-        images every time you open the new tab in your browser. This new tab will have your name to give you a
-        personalized look.
-        NewTaber will also projects the time and date to be more prominent.
-      </p>
-      <img src="./assets/f1.png" class="w-3/4 md:w-1/2 shadow-lg rounded m-4 md:m-0" />
-    </div> -->
-  </div>
+  <div class="container mx-auto m-20" id="highlights"></div>
 
   <!--   Contact Us   -->
   <section class="bg-black text-white p-10 text-center" id="contactus">
@@ -139,6 +124,61 @@
   <script src="./common.js"></script>
   <script>
     injectFooter();
+  </script>
+
+  <script>
+    let highlights = [{
+      title: 'Quality is our foremost concern',
+      description: `Make you browsing and search experience a delight one by installing NewTaber extension.
+        This extension will change the default search engine in your browser to <i><b>Yahoo!</b></i> to make it more easier to find
+        things you are searching for`,
+      illustration: './assets/i1.png'
+    }, {
+      title: 'Your extension will work everywhere',
+      description: `Make you browsing and search experience a delight one by installing NewTaber extension.
+        This extension will change the default search engine in your browser to <i><b>Yahoo!</b></i> to make it more easier to find
+        things you are searching for`,
+      illustration: './assets/i2.png'
+    }, {
+      title: 'We are at your service, Always',
+      description: `Make you browsing and search experience a delight one by installing NewTaber extension.
+        This extension will change the default search engine in your browser to <i><b>Yahoo!</b></i> to make it more easier to find
+        things you are searching for`,
+      illustration: './assets/i3.png'
+    }];
+
+    let highlightsContainer = document.getElementById('highlights');
+    let markup = '';
+
+    for (let index = 0; index < highlights.length; index++) {
+      const highlight = highlights[index];
+
+      let _markup = '';
+      let imgMarkup = `<img
+            src=${highlight.illustration}
+            class="w-2/4 md:w-2/5 rounded m-4 mb-8 md:m-0" />`;
+
+      let contentMarkup = `<div class="w-3/4 md:w-3/5 text-2xl mx-8 font-running">
+            <h3 class="mb-8 text-3xl font-running-bold">
+              ${highlight.title}
+            </h3>
+            ${highlight.description}
+          </div>`;
+
+      if (index % 2 === 0) {
+        _markup = `${imgMarkup}${contentMarkup}`;
+      } else {
+        _markup = `${contentMarkup}${imgMarkup}`;
+      }
+      
+      markup += `
+        <div class="flex flex-col md:flex-row mb-14 items-center">
+          ${_markup}
+        </div>
+      `
+    }
+
+    highlightsContainer.innerHTML = markup;
   </script>
 </body>
 
