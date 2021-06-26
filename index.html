@@ -25,7 +25,7 @@
 </head>
 
 <body>
-  <div class="bg-black text-white p-8 pb-24 hero-section">
+  <div class="bg-black text-white p-8 pb-24 hero-section relative">
     <section class="container mx-auto">
       <header>
         <div class="flex flex-col justify-center items-center mt-14">
@@ -42,10 +42,14 @@
 
         <div class="mt-20">
           <a href="#contactus"
-            class="border-4 p-3 px-6 text-xl border-white bg-white text-black hover:bg-black hover:text-white">
+            class="border-4 inline-block p-3 px-6 text-xl border-white bg-white text-black hover:bg-black hover:text-white">
             Contact Us
           </a>
         </div>
+<!-- 
+        <div class="absolute w-screen flex justify-center items-center left-0 browser-container">
+          <img src="./assets/browsers.png" class="inline w-1/3" />
+        </div> -->
 
         <!-- <div class="text-left flex flex-col md:flex-row mx-auto features justify-between mt-24 mb-10">
           <div class="feature">
@@ -98,7 +102,7 @@
   </section>
 
   <!--   CTA   -->
-  <section class="p-10 text-center mt-10 mb-10" id="cta">
+  <section class="p-10 text-center mt-10 mb-10 hidden" id="cta">
     <div class="container mx-auto">
       <div class="flex justify-around text-2xl">
         <div class="font-running">
@@ -128,7 +132,13 @@
 
   <script>
     let highlights = [{
-      title: 'Quality is our foremost concern',
+      title: 'Security is our foremost concern',
+      description: `Make you browsing and search experience a delight one by installing NewTaber extension.
+        This extension will change the default search engine in your browser to <i><b>Yahoo!</b></i> to make it more easier to find
+        things you are searching for`,
+      illustration: './assets/i4.png'
+    }, {
+      title: 'Quality is in our roots',
       description: `Make you browsing and search experience a delight one by installing NewTaber extension.
         This extension will change the default search engine in your browser to <i><b>Yahoo!</b></i> to make it more easier to find
         things you are searching for`,
@@ -170,6 +180,8 @@
       } else {
         _markup = `${contentMarkup}${imgMarkup}`;
       }
+
+      _markup = `${imgMarkup}${contentMarkup}`;
       
       markup += `
         <div class="flex flex-col md:flex-row mb-14 items-center">

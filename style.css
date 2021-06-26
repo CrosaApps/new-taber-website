@@ -40,3 +40,7 @@ body {
     margin-right: 18px;
     margin-bottom: 10px;
 }
+
+.browser-container {
+  bottom: -50px;
+}
