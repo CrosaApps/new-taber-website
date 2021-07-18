@@ -31,7 +31,7 @@ function injectFooter() {
         </div>
 
         <div class="flex items-center">
-          <img src="https://cdn.glitch.com/dceeace9-496f-4590-920c-4ca239e220fe%2Flogo.png?v=1612692524432"
+          <img src="https://cdn.glitch.com/dceeace9-496f-4590-920c-4ca239e220fe%2Flogo.png?v=1612692524432" alt="newtaber logo"
             class="w-8 h-8" />
           <span class="text-xl ml-4">NewTaber</span>
         </div>
@@ -65,6 +65,7 @@ function injectFeatures(highlights) {
     let _markup = '';
     let imgMarkup = `<img
             src=${highlight.illustration}
+            alt=${highlight.title}
             class="w-2/4 md:w-2/5 rounded m-4 mb-8 md:m-0" />`;
 
     let contentMarkup = `<div class="w-3/4 md:w-3/5 text-2xl mx-8 font-running ${liftSideImage && 'text-right'}">
