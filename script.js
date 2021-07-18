@@ -1,4 +1,4 @@
-function injectFeatures() {
+function _injectFeatures() {
   let highlights = [{
     title: 'Security is our foremost concern',
     description: `Web security has been a challenging bubble since the initial evolution of web. We at NewTaber, strive to make t
@@ -23,32 +23,7 @@ function injectFeatures() {
   }];
 
   let highlightsContainer = document.getElementById('highlights');
-  let markup = '';
-
-  for (let index = 0; index < highlights.length; index++) {
-    const highlight = highlights[index];
-    let liftSideImage = index % 2 != 0;
-
-    let _markup = '';
-    let imgMarkup = `<img
-            src=${highlight.illustration}
-            class="w-2/4 md:w-2/5 rounded m-4 mb-8 md:m-0" />`;
-
-    let contentMarkup = `<div class="w-3/4 md:w-3/5 text-2xl mx-8 font-running ${liftSideImage && 'text-right'}">
-            <h3 class="mb-8 text-3xl font-running-bold">
-                ${highlight.title}
-            </h3>
-            ${highlight.description}
-            </div>`;
-
-    _markup = `${imgMarkup}${contentMarkup}`;
-
-    markup += `
-        <div class="flex flex-col md:${liftSideImage ? 'flex-row-reverse' : 'flex-row'} mb-14 items-center">
-            ${_markup}
-        </div>
-        `
-  }
+  let markup = injectFeatures(highlights);
 
   highlightsContainer.innerHTML = markup;
 }
@@ -63,11 +38,40 @@ function injectBrowserList() {
     const browser = browsers[index];
 
     markup += `
-      <div class="bg-green-200 rounded-lg p-4 w-1/12 inline-block mx-5">
+      <div class="bg-green-200 rounded-lg p-3 sm:p-4 w-1/6 sm:w-1/12 inline-block mx-5">
         <img src=${browser} alt="" class="inline">
       </div>
     `;
   }
 
   document.getElementById('browserlist').innerHTML = markup;
+}
+
+function injectExtensionsList() {
+  let extensions = [{
+    name: 'TabX',
+    url: '/extensions/tabx.html',
+    image: '/assets/extensions/tabx/logo.png'
+  }];
+
+  let markup = '';
+
+  for (let index = 0; index < extensions.length; index++) {
+    const extension = extensions[index];
+    const { image, url, name } = extension; 
+
+    markup += `
+      <div class="sm:p-4 w-1/6 sm:w-32 inline-block mx-5 cursor-pointer">
+        <a href=${url} target="_blank">
+          <img src=${image} alt="" class="inline">
+          <div class="mt-5 font-semibold">
+            ${name}
+          </div>
+        </a>
+      </div>
+    `;
+  }
+
+
+  document.getElementById('extensions-list').innerHTML = markup;
 }

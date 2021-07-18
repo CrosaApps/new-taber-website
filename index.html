@@ -13,12 +13,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Righteous&display=swap" rel="stylesheet"> 
 
-  <title>New Taber!</title>
+  <title>NewTaber</title>
 
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
 
   <!-- import the webpage's stylesheet -->
   <link rel="stylesheet" href="/style.css" />
+
+  <style>
+    footer .bg-black {
+      background-color: white;
+      color: black;
+    }
+  </style>
 
 </head>
 
@@ -29,8 +36,8 @@
         <div class="flex flex-col justify-center items-center mt-14">
           <img src="https://cdn.glitch.com/dceeace9-496f-4590-920c-4ca239e220fe%2Flogo.png?v=1612692524432"
             class="w-20 h-20" />
-          <span class="text-3xl mt-5">New Taber</span>
-          <div class="text-2xl mt-1 text-green-500">For all your Browser Extension needs</div>
+          <span class="text-3xl mt-5">NewTaber</span>
+          <div class="text-2xl mt-1 text-green-500 text-center">For all your Browser Extension needs</div>
         </div>
       </header>
 
@@ -45,6 +52,11 @@
           <a href="#contactus"
             class="border-4 inline-block p-3 px-6 text-xl border-white bg-white text-black hover:bg-black hover:text-white">
             Contact Us
+          </a>
+
+          <a href="#ourwork"
+            class="border-4 inline-block ml-4 sm:ml-6 p-3 px-6 text-xl border-white bg-black text-white hover:bg-black hover:text-white">
+            Our Work
           </a>
         </div>
 
@@ -62,7 +74,7 @@
         What's our specialty
       </h3>
 
-      <div class="specialty flex justify-around mt-16 text-2xl">
+      <div class="specialty flex flex-col sm:flex-row justify-around mt-16 text-2xl">
         <div>
           <ul class="list-disc">
             <li> Staying on top of technological innovation  </li>
@@ -82,7 +94,28 @@
   </section>
 
   <!--   Contact Us   -->
-  <section class="p-10 text-center" id="contactus">
+  <section class="p-10 text-center" id="ourwork">
+    <div class="container mx-auto">
+      <h3 class="text-center text-4xl">
+        Our Work
+      </h3>
+
+      <div class="flex justify-around mt-10 text-2xl">
+        <div class="font-running">
+          we aim to provide you with the best possible experience in the browser extension market. 
+          <br>
+          Some of our work are,
+
+          <div class="text-3xl mt-10">
+            <div id="extensions-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--   Contact Us   -->
+  <section class="bg-black text-white p-10 text-center border-b-2" id="contactus">
     <div class="container mx-auto">
       <h3 class="text-center text-4xl">
         Contact Us
@@ -108,8 +141,9 @@
 
   <script>
     injectFooter();
-    injectFeatures();
+    _injectFeatures();
     injectBrowserList();
+    injectExtensionsList();
   </script>
 </body>
 
