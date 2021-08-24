@@ -1,12 +1,21 @@
-function injectHeader() {
-  let bannerMarkup = injectBanners();
+function injectHeader(extensionName) {
+  let bannerMarkup = injectBanners(extensionName);
 
-  let extension = {
+  let extensions = [{
     title: 'TabX',
+    id: 'tabx',
     logo: '/assets/extensions/tabx/logo.png',
     storeLink: 'https://chrome.google.com/webstore/detail/tabx/eminfcgojjkkiodcjhcllcfielmgfmhi?hl=en',
     description: 'TabX chrome extension enhances the browsing experience by changing the default search engine and add utilities such as ToDos in your browser new tab'
-  };
+  }, {
+    title: 'Jot On Tab',
+    id: 'jotontab',
+    logo: '/assets/extensions/jot-on-tab/logo.png',
+    storeLink: 'https://chrome.google.com/webstore/detail/jot-on-tab/mmhjlcabfcfjikojifodkhiekphghemo?hl=en',
+    description: 'Jot On Tab chrome extension enhances the browsing experience by changing the default search engine and enables option to add notes in your browser new tab'
+  }];
+
+  let extension = extensions.find(ext => ext.id === extensionName);
 
   let { title, description, logo, storeLink } = extension;
 
@@ -28,7 +37,7 @@ function injectHeader() {
             target="_blank"
             class="border-4 inline-block p-3 px-6 text-xl border-white bg-white text-black hover:bg-black hover:text-white"
           >
-            Get TabX
+            Get ${title}
           </a>
         </div>
       </div>
@@ -39,11 +48,14 @@ function injectHeader() {
   document.getElementById('header').innerHTML = markup;
 }
 
-function injectBanners() {
-  const banners = [
-    '/assets/extensions/tabx/store.png', 
-    // '/assets/extensions/tabx/b2.png', '/assets/extensions/tabx/b3.png'
-  ];
+function injectBanners(extensionName) {
+  const bannersMap = {
+    tabx: ['/assets/extensions/tabx/store.png'],
+    jotontab: ['/assets/extensions/jot-on-tab/store.png']
+  };
+
+  const banners = bannersMap[extensionName];
+
   let markup = '';
 
   for (let index = 0; index < banners.length; index++) {
@@ -55,19 +67,36 @@ function injectBanners() {
   return markup;
 }
 
-function _injectFeatures() {
-  let highlights = [{
-    title: 'Refreshed tab experience',
-    description: `Make you browsing and search experience a delight one by installing NewTaber extension.
-        This extension will change the default search engine in your browser to <i><b>WebSearches</b></i>! to make it more easier to find
+function _injectFeatures(extensionName) {
+  const highlightsMap = {
+    tabx: [{
+      title: 'Refreshed tab experience',
+      description: `Make you browsing and search experience a delight one by installing TabX extension.
+          This extension will change the default search engine in your browser to <i><b>WebSearches</b></i>! to make it more easier to find
+          things you are searching for`,
+      illustration: '/assets/extensions/tabx/b1.png'
+    }, {
+      title: 'Never miss any ToDo',
+      description: `Track all your ToDo at one place and never miss your ToDo. Add all your ToDo in the new tab of your browser and manage them 
+          in the new tab itself`,
+      illustration: '/assets/extensions/tabx/b3.png'
+    }],
+
+    jotontab: [{
+      title: 'Refreshed tab experience',
+      description: `Make you browsing and search experience a delight one by installing Jot On Tab extension.
+        This extension will change the default search engine in your browser to <i><b>Bing</b></i>! to make it more easier to find
         things you are searching for`,
-    illustration: '/assets/extensions/tabx/b1.png'
-  }, {
-    title: 'Never miss any ToDo',
-    description: `Track all your ToDo at one place and never miss your ToDo. Add all your ToDo in the new tab of your browser and manage them 
-        in the new tab itself`,
-    illustration: '/assets/extensions/tabx/b3.png'
-  }];
+      illustration: '/assets/extensions/jot-on-tab/b1.png'
+    }, {
+      title: 'Never miss any thoughts',
+      description: `Track all your notes at one place and never miss any of your thoughts. Add all your notes, update, delete them in the new tab of your browser and manage them 
+      in the new tab itself`,
+      illustration: '/assets/extensions/jot-on-tab/b2.png'
+    }]
+  };
+
+  const highlights = highlightsMap[extensionName];
 
   let highlightsContainer = document.getElementById('highlights');
   let markup = injectFeatures(highlights);

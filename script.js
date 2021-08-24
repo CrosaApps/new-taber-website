@@ -28,7 +28,6 @@ function _injectFeatures() {
   highlightsContainer.innerHTML = markup;
 }
 
-
 function injectBrowserList() {
   let browsers = ['./assets/chrome.png', './assets/ff.png', './assets/safari.png']
 
@@ -52,6 +51,10 @@ function injectExtensionsList() {
     name: 'TabX',
     url: '/extensions/tabx.html',
     image: '/assets/extensions/tabx/logo.png'
+  }, {
+    name: 'Jot On Tab',
+    url: '/extensions/jot-on-tab.html',
+    image: '/assets/extensions/jot-on-tab/logo.png'
   }];
 
   let markup = '';
@@ -61,10 +64,10 @@ function injectExtensionsList() {
     const { image, url, name } = extension; 
 
     markup += `
-      <div class="sm:p-4 w-1/6 sm:w-32 inline-block mx-5 cursor-pointer">
+      <div class="w-full sm:w-1/5 inline-block mt-6 sm:mt-0 cursor-pointer">
         <a href=${url} target="_blank">
-          <img src=${image} alt="" class="inline">
-          <div class="mt-5 font-semibold">
+          <img src=${image} alt="" class="inline w-1/3 sm:w-24">
+          <div class="mt-5 font-semibold text-lg sm:kindly check yarn lock datext-3xl">
             ${name}
           </div>
         </a>
