@@ -35,7 +35,9 @@ function injectHeader(extensionName) {
           <a
             href=${storeLink}
             target="_blank"
-            class="border-4 inline-block p-3 px-6 text-xl border-white bg-white text-black hover:bg-black hover:text-white"
+            class="
+              border-4 inline-block p-3 px-6 text-xl 
+              border-blue-600 bg-blue-600 text-white hover:bg-blue-700 hover:text-white"
           >
             Get ${title}
           </a>
