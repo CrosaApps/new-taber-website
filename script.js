@@ -48,9 +48,9 @@ function injectBrowserList() {
 
 function injectExtensionsList() {
   let extensions = [{
-    name: 'TabX',
-    url: '/extensions/tabx.html',
-    image: '/assets/extensions/tabx/logo.png'
+    name: 'Fox Tab',
+    url: '/extensions/foxtab.html',
+    image: '/assets/extensions/foxtab/logo.png'
   }, {
     name: 'Jot On Tab',
     url: '/extensions/jot-on-tab.html',

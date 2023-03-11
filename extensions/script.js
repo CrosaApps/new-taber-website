@@ -2,11 +2,11 @@ function injectHeader(extensionName) {
   let bannerMarkup = injectBanners(extensionName);
 
   let extensions = [{
-    title: 'TabX',
-    id: 'tabx',
-    logo: '/assets/extensions/tabx/logo.png',
-    storeLink: 'https://chrome.google.com/webstore/detail/tabx/eminfcgojjkkiodcjhcllcfielmgfmhi?hl=en',
-    description: 'TabX chrome extension enhances the browsing experience by changing the default search engine and add utilities such as ToDos in your browser new tab'
+    title: 'Fox Tab',
+    id: 'foxtab',
+    logo: '/assets/extensions/foxtab/logo.png',
+    storeLink: 'https://chrome.google.com/webstore/detail/fox-tab/pecgmnihbokhfnemdmjbkhcgpehlcokj',
+    description: 'Fox Tab chrome extension enhances the browsing experience by changing the default search engine and add utilities such as ToDos in your browser new tab'
   }, {
     title: 'Jot On Tab',
     id: 'jotontab',
@@ -52,7 +52,7 @@ function injectHeader(extensionName) {
 
 function injectBanners(extensionName) {
   const bannersMap = {
-    tabx: ['/assets/extensions/tabx/store.png'],
+    foxtab: ['/assets/extensions/foxtab/store.png'],
     jotontab: ['/assets/extensions/jot-on-tab/store.png']
   };
 
@@ -71,17 +71,17 @@ function injectBanners(extensionName) {
 
 function _injectFeatures(extensionName) {
   const highlightsMap = {
-    tabx: [{
+    foxtab: [{
       title: 'Refreshed tab experience',
-      description: `Make you browsing and search experience a delight one by installing TabX extension.
+      description: `Make you browsing and search experience a delight one by installing Fox Tab extension.
           This extension will change the default search engine in your browser to <i><b>WebSearches</b></i>! to make it more easier to find
           things you are searching for`,
-      illustration: '/assets/extensions/tabx/b1.png'
+      illustration: '/assets/extensions/foxtab/b1.png'
     }, {
       title: 'Never miss any ToDo',
       description: `Track all your ToDo at one place and never miss your ToDo. Add all your ToDo in the new tab of your browser and manage them 
           in the new tab itself`,
-      illustration: '/assets/extensions/tabx/b3.png'
+      illustration: '/assets/extensions/foxtab/b3.png'
     }],
 
     jotontab: [{
