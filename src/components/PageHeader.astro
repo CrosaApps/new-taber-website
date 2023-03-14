@@ -1,0 +1,17 @@
+---
+export interface Props {
+	title: string
+}
+
+const { title } = Astro.props;
+---
+
+<section class="bg-black text-white  p-8">
+  <div class="container mx-auto">
+    <div class="flex flex-col justify-center items-center mt-10">
+      <img src="https://cdn.glitch.com/dceeace9-496f-4590-920c-4ca239e220fe%2Flogo.png?v=1612692524432"
+        class="w-20 h-20" />
+      <span class="text-3xl mt-8">{title} &bull; NewTaber</span>
+    </div>
+  </div>
+</section>

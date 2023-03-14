@@ -1,0 +1,60 @@
+---
+import SecondaryLayout from "../layouts/SecondaryLayout.astro";
+
+const questions = [
+  // {
+  //   q: 'What themes do you have?',
+  //   a: `There are new themes added regularly. Current themes include Mountain, River,
+  //   Beach, Forest and Earth.`
+  // },
+  // {
+  //   q: 'How can I add my name?',
+  //   a: `<div>To add you name to your greeting:</div>
+
+  //       <li>Click “Change Name”. This can be located at the bottom of the screen.</li>
+  //       <li>Add your name and click "OK".</li>`
+  // },
+  // {
+  //   q: 'What will be the new search engine?',
+  //   a: `Once installed NewTaber, the default search engine will be changed to <b><i>Yahoo!</i></b>.`
+  // },
+  {
+    q: "Is my personal data safe?",
+    a: `NewTaber extension and NewTaber website will never access, request or capture any of your personally identifiable details. Our properties are created 
+              to keep all of your data anonymous and 100% safe.`,
+  },
+  {
+    q: "How do I remove your Google Chrome extensions?",
+    a: `<div>If you wish to remove one of our Google Chrome extensions just follow these steps:</div>
+
+            <li>Go to Settings in Google Chrome.</li>
+            <li>Click “Extensions” in the menu on the left.</li>
+            <li>Find the extension you wish to remove and click “Remove”.</li>`,
+  },
+];
+---
+
+<SecondaryLayout headerName="FAQ">
+  <section id="about" class="other font-running text-2xl my-16 p-6">
+    <div class="container mx-auto">
+      <div class="font-running text-2xl">
+        {
+          questions.map((faq) => {
+            return (
+              <div class="mb-10">
+                <>
+                  <div class="question font-bold text-2xl text-green-700 mb-4">
+                    {faq.q}
+                  </div>
+                  <div class="answer ml-10">
+                    <Fragment set:html={faq.a} />
+                  </div>
+                </>
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+</SecondaryLayout>
