@@ -1,0 +1,54 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Newtaber is for all your Browser Extension needs. Contact us for any extension development process">
+		<meta name="keywords" content="Chrome extension, NewTaber, Fox Tab, browser extension, development">
+
+		<link rel="shortcut icon"
+			href="https://cdn.glitch.com/dceeace9-496f-4590-920c-4ca239e220fe%2Flogo.png?v=1612692524432" />
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Righteous&display=swap" rel="stylesheet"> 
+
+  	<title>{title} | NewTaber</title>
+
+		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+		<meta name="generator" content={Astro.generator} />
+		<!-- <title>{title}</title> -->
+
+		<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+
+		<!-- import the webpage's stylesheet -->
+		<link rel="stylesheet" href="/style.css" />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+
+	/* :root {
+		--accent: 124, 58, 237;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+	} */
+	/* html {
+		font-family: system-ui, sans-serif;
+		background-color: #F6F6F6;
+	}
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	} */
+</style>

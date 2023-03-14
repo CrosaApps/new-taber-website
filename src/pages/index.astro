@@ -1,0 +1,187 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BrowserIcon from '../components/BrowserIcon.astro';
+import Highlights from '../components/Highlights.astro';
+import ExtensionLink from '../components/ExtensionLink.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Home">
+	<main>
+		<div class="bg-black text-white p-8 pb-20 hero-section relative">
+			<section class="container mx-auto">
+				<header>
+					<div class="flex flex-col justify-center items-center mt-14">
+						<img 
+							src="https://cdn.glitch.com/dceeace9-496f-4590-920c-4ca239e220fe%2Flogo.png?v=1612692524432"
+							alt="NewTaber logo"
+							class="w-20 h-20" 
+						/>
+						<span class="text-3xl mt-5">NewTaber</span>
+						<div class="text-2xl mt-1 text-green-500 text-center">For all your Browser Extension needs</div>
+					</div>
+				</header>
+	
+				<div class="text-center mt-20">
+					<div class="text-4xl" style="line-height: 3rem">
+						We are a <span class="text-green-500x">team</span> of <span class="text-green-500x">enthusiastic Extension developer</span> who loves to solve the day-to-day issues using a wide variety of browser extension!
+					</div>
+	
+					<div class="container mx-auto text-center mt-16">
+						<BrowserIcon browser="chrome" />
+						<BrowserIcon browser="ff" />
+						<BrowserIcon browser="safari" />
+					</div>
+	
+					<div class="mt-16">
+						<a href="#contactus"
+							class="mt-4 border-4 inline-block p-3 px-6 text-xl border-white bg-white text-black hover:bg-black hover:text-white">
+							Contact Us
+						</a>
+	
+						<a href="#ourwork"
+							class="mt-4 border-4 inline-block ml-0 sm:ml-4 sm:ml-6 p-3 px-6 text-xl border-white bg-black text-white hover:bg-black hover:text-white">
+							Our Work
+						</a>
+					</div>
+	
+				</div>
+			</section>
+		</div>
+	
+		<!--  Features Section   -->
+		<div class="container mx-auto m-20">
+			<Highlights index={0} />
+			<Highlights index={1} />
+			<Highlights index={2} />
+			<Highlights index={3} />
+		</div>
+	
+		<!--   Benefits    -->
+		<section class="bg-black text-white p-10" id="spacialty">
+			<div class="container mx-auto">
+				<h3 class="text-center text-4xl text-center">
+					What's our specialty
+				</h3>
+	
+				<div class="specialty flex flex-col sm:flex-row justify-around mt-16 text-2xl">
+					<div>
+						<ul class="list-disc">
+							<li> Staying on top of technological innovation  </li>
+							<li> Improved browsing experience  </li>
+							<li> Focusing on Productivity   </li>
+						</ul>
+					</div>
+					<div>
+						<ul class="list-disc">
+							<li> Wide range of integrations  </li>
+							<li> Added browser functionality </li>
+							<li> Accessibility at it's core   </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<!--   Contact Us   -->
+		<section class="p-10 text-center" id="ourwork">
+			<div class="container mx-auto">
+				<h3 class="text-center text-4xl">
+					Our Work
+				</h3>
+	
+				<div class="flex justify-around mt-10 text-2xl">
+					<div class="font-running">
+						we aim to provide you with the best possible experience in the browser extension market. 
+						<br>
+						Some of our work are,
+	
+						<div class="text-3xl mt-10">
+							<div>
+								<ExtensionLink extension="foxtab" />
+								<ExtensionLink extension="jot" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<!--   Contact Us   -->
+		<section class="bg-black text-white p-10 text-center border-b-2" id="contactus">
+			<div class="container mx-auto">
+				<h3 class="text-center text-4xl">
+					Contact Us
+				</h3>
+	
+				<div class="flex justify-around mt-16 text-2xl">
+					<div class="font-running">
+						Contact us for any queries related to the New-Taber. We'll thrive to get back to any queries as fast as
+						we can. Just send us an Email for any queries
+						<div class="text-3xl mt-10">
+							<a class="underline" href="mailto:support@newtaber.com">support@newtaber.com</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<!--   Footer   -->
+		<Footer bg="white" />
+	
+		<!-- <script src="./common.js"></script>
+		<script src="/script.js"></script> -->
+	
+		<!-- <script>
+			injectFooter();
+			_injectFeatures();
+			injectBrowserList();
+			injectExtensionsList();
+		</script> -->
+	</main>
+</Layout>
+
+<style>
+	/* main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 60ch;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		border: 1px solid rgba(var(--accent), 25%);
+		background-color: white;
+		padding: 1rem;
+		border-radius: 0.4rem;
+	}
+	.instructions code {
+		font-size: 0.875em;
+		font-weight: bold;
+		background: rgba(var(--accent), 12%);
+		color: rgb(var(--accent));
+		border-radius: 4px;
+		padding: 0.3em 0.45em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	} */
+</style>

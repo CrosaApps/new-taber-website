@@ -1,0 +1,11 @@
+---
+export interface Props {
+	browser: string
+}
+
+const browsers = { chrome: './images/chrome.png', ff: './images/ff.png', safari:'./images/safari.png' };
+const { browser } = Astro.props;
+---
+<div class="bg-green-200 rounded-lg p-3 sm:p-4 w-1/6 sm:w-1/12 inline-block mx-5">
+  <img src={browsers[browser]} alt="" class="inline">
+</div>
