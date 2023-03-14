@@ -1,0 +1,7 @@
+{
+  "name": "newtaber",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "mv *.js *.css *.html _redirects *.toml assets/ extensions/ dist"
+  }
+}
