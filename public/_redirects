@@ -1,0 +1,9 @@
+/search  https://websearches.xyz/search/results.php        301!
+
+# jot search link - direct bing search
+/search/jot-bing  https://www.bing.com/search       301!
+
+# jot search link - rerouted search page
+# /search/jot-bing q=:q  https://getallsearchresults.com/r/mhrmedtabr1000?keywords=:q       301!
+
+/search/jot-yahoo  https://search.yahoo.com/search       301!
