@@ -7,3 +7,6 @@
 # /search/jot-bing q=:q  https://getallsearchresults.com/r/mhrmedtabr1000?keywords=:q       301!
 
 /search/jot-yahoo  https://search.yahoo.com/search       301!
+
+# For TabBuddy
+/search/tabbuddy  https://search.yahoo.com/search       301!
