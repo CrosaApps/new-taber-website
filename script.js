@@ -52,6 +52,10 @@ function injectExtensionsList() {
     url: '/extensions/foxtab.html',
     image: '/assets/extensions/foxtab/logo.png'
   }, {
+    name: 'Tab Buddy',
+    url: '/extensions/tab-buddy.html',
+    image: '/assets/extensions/tab-buddy/logo.png'
+  }, {
     name: 'Jot On Tab',
     url: '/extensions/jot-on-tab.html',
     image: '/assets/extensions/jot-on-tab/logo.png'

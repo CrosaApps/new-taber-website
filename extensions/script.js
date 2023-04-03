@@ -8,6 +8,12 @@ function injectHeader(extensionName) {
     storeLink: 'https://chrome.google.com/webstore/detail/fox-tab/pecgmnihbokhfnemdmjbkhcgpehlcokj',
     description: 'Fox Tab chrome extension enhances the browsing experience by changing the default search engine and add utilities such as ToDos in your browser new tab'
   }, {
+    title: 'Tab Buddy',
+    id: 'tab-buddy',
+    logo: '/assets/extensions/tab-buddy/logo.png',
+    storeLink: 'https://chrome.google.com/webstore/detail/tab-buddy/adhkabibjnnpbchkedfdjoellmmncfkc',
+    description: 'Tab Buddy chrome extension enhances the browsing experience by changing the default search engine and add utilities such as ToDos in your browser new tab'
+  }, {
     title: 'Jot On Tab',
     id: 'jotontab',
     logo: '/assets/extensions/jot-on-tab/logo.png',
@@ -53,7 +59,8 @@ function injectHeader(extensionName) {
 function injectBanners(extensionName) {
   const bannersMap = {
     foxtab: ['/assets/extensions/foxtab/store.png'],
-    jotontab: ['/assets/extensions/jot-on-tab/store.png']
+    jotontab: ['/assets/extensions/jot-on-tab/store.png'],
+    'tab-buddy': ['/assets/extensions/tab-buddy/store.png']
   };
 
   const banners = bannersMap[extensionName];
@@ -82,6 +89,19 @@ function _injectFeatures(extensionName) {
       description: `Track all your ToDo at one place and never miss your ToDo. Add all your ToDo in the new tab of your browser and manage them 
           in the new tab itself`,
       illustration: '/assets/extensions/foxtab/b3.png'
+    }],
+
+    'tab-buddy': [{
+      title: 'Refreshed tab experience',
+      description: `Make you browsing and search experience a delight one by installing Fox Tab extension.
+          This extension will change the default search engine in your browser to <i><b>WebSearches</b></i>! to make it more easier to find
+          things you are searching for`,
+      illustration: '/assets/extensions/tab-buddy/b1.png'
+    }, {
+      title: 'Never miss any ToDo',
+      description: `Track all your ToDo at one place and never miss your ToDo. Add all your ToDo in the new tab of your browser and manage them 
+          in the new tab itself`,
+      illustration: '/assets/extensions/tab-buddy/b3.png'
     }],
 
     jotontab: [{
