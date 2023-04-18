@@ -1,12 +1,14 @@
+# For Fox Tab
 /search  https://websearches.xyz/search/results.php        301!
 
-# jot search link - direct bing search
-/search/jot-bing  https://www.bing.com/search       301!
+# For JotOnTab
+/search/jot-bing  https://network.search-fly.com/track/1326/?q={keyword}       301!
 
+# For TabBuddy
+/search/tabbuddy  https://search.yahoo.com/search       301!
+
+# Other older links:
 # jot search link - rerouted search page
 # /search/jot-bing q=:q  https://getallsearchresults.com/r/mhrmedtabr1000?keywords=:q       301!
 
 /search/jot-yahoo  https://search.yahoo.com/search       301!
-
-# For TabBuddy
-/search/tabbuddy  https://network.search-fly.com/track/1251       301!
